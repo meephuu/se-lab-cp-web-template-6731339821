@@ -5,7 +5,7 @@ jobs:
 
   mr-lint:
     name: MR Title Lint
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: src/frontend
@@ -28,7 +28,7 @@ jobs:
         run: echo "${{ github.event.pull_request.title }}" | npx commitlint --verbose
 
   format-and-fix:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write # Needed to push formatted commits back to the repo
     steps:

@@ -26,7 +26,7 @@ jobs:
     uses: ./.github/workflows/backend-tests.yml
   ci-finalize:
     name: CI Finalize
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     if: ${{ always() }}
     needs:
       - pre-check
